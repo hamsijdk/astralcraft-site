@@ -9,7 +9,7 @@
 
   body {
     margin: 0;
-    background: linear-gradient(135deg, #2a0b45, #0d0030);
+    background-color: #000000; /* Tam siyah arka plan */
     color: white;
     font-family: 'Orbitron', sans-serif;
     min-height: 100vh;
@@ -17,12 +17,6 @@
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    background-image:
-      radial-gradient(circle at 20% 30%, #8e44ad 2px, transparent 3px),
-      radial-gradient(circle at 50% 70%, #bb8fce 1.5px, transparent 2.5px),
-      radial-gradient(circle at 80% 20%, #a569bd 2px, transparent 3px);
-    background-repeat: repeat;
-    background-size: 100px 100px;
   }
 
   .profile {
@@ -43,109 +37,4 @@
   .saturn-icon::before {
     content: '';
     position: absolute;
-    top: 45%;
-    left: -15%;
-    width: 130%;
-    height: 20px;
-    background: linear-gradient(90deg, transparent 20%, #bb8fce 50%, transparent 80%);
-    border-radius: 50% / 50%;
-    transform: rotate(-25deg);
-    box-shadow: 0 0 15px #bb8fce;
-  }
-
-  .profile-name {
-    font-size: 2.5rem;
-    color: #d86eff; /* Mor */
-    text-shadow: 0 0 8px #bb8fce;
-  }
-
-  .vip-container {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 900px;
-    width: 100%;
-  }
-
-  .vip-box {
-    background: rgba(100, 43, 135, 0.7);
-    border-radius: 18px;
-    padding: 25px 30px;
-    box-shadow: 0 0 15px #d86eff;
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  .vip-box:hover {
-    transform: scale(1.1);
-  }
-
-  .vip-name {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .vip-price {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    font-weight: 600;
-  }
-
-  .vip-name.vip {
-    color: #f7dc6f; /* Sarı */
-  }
-  .vip-name.mvip {
-    color: #27ae60; /* Yeşil */
-  }
-  .vip-name.astralvip {
-    color: #d86eff; /* Mor */
-  }
-
-  .buy-btn {
-    background-color: white;
-    color: black;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: background-color 0.25s ease;
-  }
-  .buy-btn:hover {
-    background-color: #bb8fce;
-    color: white;
-  }
-</style>
-</head>
-<body>
-
-  <div class="profile">
-    <div class="saturn-icon"></div>
-    <div class="profile-name">AstralCraft Player</div>
-  </div>
-
-  <div class="vip-container">
-    <div class="vip-box">
-      <div class="vip-name vip">VIP</div>
-      <div class="vip-price">15 TL</div>
-      <button class="buy-btn">Satın Al</button>
-    </div>
-
-    <div class="vip-box">
-      <div class="vip-name mvip">MVIP</div>
-      <div class="vip-price">25 TL</div>
-      <button class="buy-btn">Satın Al</button>
-    </div>
-
-    <div class="vip-box">
-      <div class="vip-name astralvip">ASTRAL VIP</div>
-      <div class="vip-price">35 TL</div>
-      <button class="buy-btn">Satın Al</button>
-    </div>
-  </div>
-
-</body>
-</html>
+    top: 45

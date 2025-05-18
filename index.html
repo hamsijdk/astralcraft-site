@@ -3,193 +3,149 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AstralCraft</title>
+<title>AstralCraft Profil</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
   body {
-    background: linear-gradient(135deg, #0b0f2a, #1a237e);
-    color: #eee;
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-
-  header {
-    background: radial-gradient(circle at center, #2e3a8c, #0b0f2a);
+    background: linear-gradient(135deg, #2a0b45, #0d0030);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 40px 20px;
-    box-shadow: 0 0 15px #7c4dff;
-    position: relative;
+    background-image:
+      radial-gradient(circle at 20% 30%, #8e44ad 2px, transparent 3px),
+      radial-gradient(circle at 50% 70%, #bb8fce 1.5px, transparent 2.5px),
+      radial-gradient(circle at 80% 20%, #a569bd 2px, transparent 3px);
+    background-repeat: repeat;
+    background-size: 100px 100px;
   }
 
-  header::before {
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .saturn-icon {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 40% 40%, #a569bd, #4a235a);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 15px #bb8fce;
+  }
+  .saturn-icon::before {
     content: '';
     position: absolute;
-    top: 10px; left: 50%;
-    width: 300px; height: 300px;
-    background: radial-gradient(circle, #ffffff55 10%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(30px);
-    transform: translateX(-50%);
-    animation: glow 3s infinite alternate;
-    pointer-events: none;
-    z-index: 0;
+    top: 45%;
+    left: -15%;
+    width: 130%;
+    height: 20px;
+    background: linear-gradient(90deg, transparent 20%, #bb8fce 50%, transparent 80%);
+    border-radius: 50% / 50%;
+    transform: rotate(-25deg);
+    box-shadow: 0 0 15px #bb8fce;
   }
 
-  @keyframes glow {
-    0% {opacity: 0.3;}
-    100% {opacity: 0.7;}
+  .profile-name {
+    font-size: 2.5rem;
+    color: #d86eff; /* Mor */
+    text-shadow: 0 0 8px #bb8fce;
   }
 
-  .logo-text {
-    font-family: 'Orbitron', monospace;
-    font-size: 48px;
-    font-weight: 700;
-    color: white;
-    letter-spacing: 8px;
-    text-shadow:
-      0 0 7px #7c4dff,
-      0 0 10px #7c4dff,
-      0 0 20px #7c4dff,
-      0 0 30px #a078ff,
-      0 0 40px #c4a3ff;
-    position: relative;
-    z-index: 1;
-  }
-
-  main {
-    margin: 40px auto;
-    max-width: 420px;
-  }
-
-  h2 {
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: #cfcfff;
-    text-shadow: 0 0 10px #6666cc;
-  }
-
-  .package {
-    background: #22294d;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #4a4a8d;
-    margin-bottom: 25px;
-    padding: 25px 20px;
-    color: white;
-    font-weight: 700;
-  }
-
-  .vip {
-    background-color: #fbc02d; /* Sarı */
-    color: #3b2f00;
-    box-shadow: 0 0 15px #fbc02d;
-  }
-
-  .mvip {
-    background-color: #4caf50; /* Yeşil */
-    color: #003300;
-    box-shadow: 0 0 15px #4caf50;
-  }
-
-  .astral-vip {
-    background-color: #9c27b0; /* Mor */
-    color: #fff;
-    box-shadow: 0 0 20px #ba68c8;
-  }
-
-  .price {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .buttons {
+  .vip-container {
     display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    max-width: 900px;
+    width: 100%;
   }
 
-  .btn {
-    background: #333;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    cursor: pointer;
+  .vip-box {
+    background: rgba(100, 43, 135, 0.7);
+    border-radius: 18px;
+    padding: 25px 30px;
+    box-shadow: 0 0 15px #d86eff;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .vip-box:hover {
+    transform: scale(1.1);
+  }
+
+  .vip-name {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
     font-weight: 700;
+    text-transform: uppercase;
+  }
+  .vip-price {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .vip-name.vip {
+    color: #f7dc6f; /* Sarı */
+  }
+  .vip-name.mvip {
+    color: #27ae60; /* Yeşil */
+  }
+  .vip-name.astralvip {
+    color: #d86eff; /* Mor */
+  }
+
+  .buy-btn {
+    background-color: white;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.25s ease;
+  }
+  .buy-btn:hover {
+    background-color: #bb8fce;
     color: white;
-    transition: background 0.3s ease;
-    text-decoration: none;
-    min-width: 90px;
-  }
-
-  .btn:hover {
-    background: #555;
-  }
-
-  .papara {
-    background-color: #ff6d00;
-    box-shadow: 0 0 10px #ff6d00;
-  }
-
-  .papara:hover {
-    background-color: #e65c00;
-  }
-
-  .paypal {
-    background-color: #003087;
-    box-shadow: 0 0 10px #003087;
-  }
-
-  .paypal:hover {
-    background-color: #002170;
-  }
-
-  footer {
-    margin-top: 50px;
-    padding: 10px;
-    font-size: 14px;
-    color: #888;
   }
 </style>
 </head>
 <body>
-  <header>
-    <div class="logo-text">ASTRALCRAFT</div>
-  </header>
 
-  <main>
-    <h2>Satışlar</h2>
+  <div class="profile">
+    <div class="saturn-icon"></div>
+    <div class="profile-name">AstralCraft Player</div>
+  </div>
 
-    <div class="package vip">
-      <div>VIP</div>
-      <div class="price">15 TL</div>
-      <div class="buttons">
-        <a href="https://your-papara-link.com/vip" target="_blank" class="btn papara">Papara</a>
-        <a href="https://www.paypal.com/paypalme/yourpaypal/vip" target="_blank" class="btn paypal">PayPal</a>
-      </div>
+  <div class="vip-container">
+    <div class="vip-box">
+      <div class="vip-name vip">VIP</div>
+      <div class="vip-price">15 TL</div>
+      <button class="buy-btn">Satın Al</button>
     </div>
 
-    <div class="package mvip">
-      <div>MVIP</div>
-      <div class="price">25 TL</div>
-      <div class="buttons">
-        <a href="https://your-papara-link.com/mvip" target="_blank" class="btn papara">Papara</a>
-        <a href="https://www.paypal.com/paypalme/yourpaypal/mvip" target="_blank" class="btn paypal">PayPal</a>
-      </div>
+    <div class="vip-box">
+      <div class="vip-name mvip">MVIP</div>
+      <div class="vip-price">25 TL</div>
+      <button class="buy-btn">Satın Al</button>
     </div>
 
-    <div class="package astral-vip">
-      <div>ASTRAL VIP</div>
-      <div class="price">35 TL</div>
-      <div class="buttons">
-        <a href="https://your-papara-link.com/astralvip" target="_blank" class="btn papara">Papara</a>
-        <a href="https://www.paypal.com/paypalme/yourpaypal/astralvip" target="_blank" class="btn paypal">PayPal</a>
-      </div>
+    <div class="vip-box">
+      <div class="vip-name astralvip">ASTRAL VIP</div>
+      <div class="vip-price">35 TL</div>
+      <button class="buy-btn">Satın Al</button>
     </div>
-  </main>
+  </div>
 
-  <footer>
-    &copy; 2025 AstralCraft - Tüm Hakları Saklıdır.
-  </footer>
 </body>
 </html>
